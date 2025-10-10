@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "tailwind": "npx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./src/assets/css/main.css --watch",
+    "tailwind": "npx @tailwindcss/cli -i ./public/css/tailwind.css -o ./public/css/main.css --watch",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
