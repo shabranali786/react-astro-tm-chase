@@ -1,0 +1,25 @@
+on:
+  workflow_dispatch:
+name: 🚀 Deploy website on Click
+jobs:
+  web-deploy:
+    name: 🎉 Deploy website on Click
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+      - name: 📦 Install dependencies
+        run: npm install
+      - name: 🛠️ Build project
+        run: npm run build
+      # - name: 📄 Copy .htaccess to dist folder
+      #   run: cp .htaccess dist/
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 15.204.197.218
+          username: ${{ secrets.TEST_FTP_USERNAME }}
+          password: ${{ secrets.TEST_FTP_PASSWORD }}
+          protocol: ftp
+          server-dir: /
+          local-dir: dist/
