@@ -1,14 +1,9 @@
 ---
-// pages/[...path].astro
 import Layout from '../layouts/Layout.astro';
-
-// All React components ko import karein
 import {Home, About, Contact, Services} from '../react/pages/AllPages';
-
-// getStaticPaths function - REQUIRED for dynamic routes
 export async function getStaticPaths() {
   return [
-    { params: { path: undefined } },  // For root path "/"
+    { params: { path: undefined } },
     { params: { path: 'home' } },
     { params: { path: 'about' } },
     { params: { path: 'contact' } },
@@ -16,10 +11,7 @@ export async function getStaticPaths() {
   ];
 }
 
-// URL se path extract karein
 const { path } = Astro.params;
-
-// Path ko normalize karein (empty ya undefined ke liye 'home')
 const pageName = (path || 'home').toLowerCase();
 
 const pageTitle = pageName.charAt(0).toUpperCase() + pageName.slice(1);

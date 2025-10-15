@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
       <div className="container max-w-2xl mx-auto">
-        <h2 className=' font-bold text-4xl'>Home</h2>
+        <h2 className=" font-bold text-4xl">Home</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro velit
           sequi non eligendi unde aliquid natus nobis quisquam cum. In fugiat
@@ -30,6 +30,11 @@ const Home = () => {
           tenetur, esse dolorem inventore nesciunt facere ipsa.
         </p>
       </div>
+      <section>
+        <div className="container max-w-2xl mx-auto">
+            <h2 className=' text-3xl font-bold'>Demo</h2>
+        </div>
+      </section>
     </>
   );
 }
