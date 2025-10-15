@@ -1,5 +1,5 @@
 ---
-import { ClientRouter  } from 'astro:transitions';
+import { ClientRouter, fade  } from 'astro:transitions';
 import Header from '../react/components/Layout/Header';
 ---
 
@@ -16,6 +16,8 @@ import Header from '../react/components/Layout/Header';
 	</head>
 	<body>
 		<Header/>
-		<slot />
+		<div transition:animate={fade({ duration: '0s' })}>
+			<slot/>
+		</div>
 	</body>
 </html>
