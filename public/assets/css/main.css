@@ -351,9 +351,6 @@
   .h-0 {
     height: calc(var(--spacing) * 0);
   }
-  .h-\[600px\] {
-    height: 600px;
-  }
   .h-auto {
     height: auto;
   }
@@ -414,9 +411,6 @@
   .max-w-full {
     max-width: 100%;
   }
-  .flex-shrink {
-    flex-shrink: 1;
-  }
   .flex-shrink-0 {
     flex-shrink: 0;
   }
@@ -440,9 +434,6 @@
   }
   .basis-auto {
     flex-basis: auto;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .-translate-x-full {
     --tw-translate-x: -100%;
@@ -622,9 +613,6 @@
   .border-primary {
     border-color: var(--color-primary);
   }
-  .border-white {
-    border-color: var(--color-white);
-  }
   .border-white\/30 {
     border-color: color-mix(in srgb, #fff 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -655,9 +643,6 @@
   .object-contain {
     object-fit: contain;
   }
-  .object-cover {
-    object-fit: cover;
-  }
   .p-0 {
     padding: calc(var(--spacing) * 0);
   }
@@ -675,9 +660,6 @@
   }
   .px-\[0\.4rem\] {
     padding-inline: 0.4rem;
-  }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
   }
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
@@ -784,9 +766,6 @@
     --tw-tracking: var(--tracking-normal);
     letter-spacing: var(--tracking-normal);
   }
-  .text-wrap {
-    text-wrap: wrap;
-  }
   .break-normal {
     overflow-wrap: normal;
     word-break: normal;
@@ -824,6 +803,9 @@
   .normal-case {
     text-transform: none;
   }
+  .italic {
+    font-style: italic;
+  }
   .not-italic {
     font-style: normal;
   }
@@ -854,10 +836,6 @@
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .blur {
     --tw-blur: blur(8px);
@@ -1971,11 +1949,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -2073,7 +2046,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
