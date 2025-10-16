@@ -1,0 +1,160 @@
+---
+import { Image, Picture } from "astro:assets";
+---
+
+<div class="w-full z-10">
+    <div class="container-fluid 4xl:max-w-[1920px] mx-auto">
+        <nav class="relative flex w-full flex-nowrap items-center justify-between text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:flex-wrap lg:justify-start lg:py-4"
+            data-twe-navbar-ref>
+            <div class="flex w-full flex-wrap items-center justify-between gap-2">
+                <div>
+                    <a class="text-xl text-white" href="/">
+                        <Picture src="/assets/img/logo-black.svg" alt="logo white"
+                            width="100" height="60" class="object-contain w-[clamp(150px,12vw,200px)]">
+                    </a>
+                </div>
+                <!-- Hamburger button for mobile view -->
+                <button
+                    class="block border-0 bg-transparent px-2 text-white hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden"
+                    type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent2"
+                    aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- Hamburger icon -->
+                    <span class="[&>svg]:w-7 [&>svg]:stroke-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+
+                <div class="!visible mb-2 lg:mb-0 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto bg-primary lg:bg-transparent p-4 lg:p-0 rounded-lg"
+                    id="navbarSupportedContent2" data-twe-collapse-item>
+
+                    <ul class="list-style-none menu-items lg:mx-auto flex flex-col ps-0 lg:flex-row relative [&_*]:font-poppins [&_*]:text-[16px]  gap-2 lg:gap-5 xl:gap-7 lg:items-center mb-4 lg:mb-0"
+                        data-twe-navbar-nav-ref>
+
+                        <li class="" data-twe-nav-item-ref>
+                            <a aria-current="page" class="transition-all duration-200 hover:ease-in-out hover:!text-black/80 xl:hover:!text-primary active" href="/"
+                                data-twe-nav-link-ref>Home</a>
+                        </li>
+
+                        <li class="" data-twe-nav-item-ref>
+                            <a class="p-0 transition-all duration-200 hover:ease-in-out hover:!text-black/80 xl:hover:!text-primary"
+                                href="/about" data-twe-nav-link-ref>About Us</a>
+                        </li>
+
+                        <!-- Dropdown: Trademark Registration -->
+                        <li class="relative" data-twe-dropdown-ref>
+                            <a class="flex hover:!text-black/80 xl:hover:!text-primary items-center transition-all" href="#" type="button"
+                                id="dropdownMenuButton2" data-twe-dropdown-toggle-ref aria-expanded="false">
+                                Trademark Registration
+                                <span class="ms-2 [&>svg]:w-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <div class="absolute z-[1000] float-left m-0 hidden list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block p-2 max-w-[250px] w-max"
+                                aria-labelledby="dropdownMenuButton1" data-twe-dropdown-menu-ref>
+                                <ul class="[&>li>a]:text-wrap max-h-[350px] overflow-hidden overflow-y-auto">
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/trademark-registration">Trademark Registration</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/comprehensive-trademark-search">Comprehensive Trademark Search</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/copyright-registration">Copyright Registration</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/international-trademark-registration">International Trademark Registration</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/ipo-representation">IPO Representation</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/office-action-response">Office Action Response</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/trademark-statement-of-use">Statement of Use</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/trademark-renewal">Trademark Renewal</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/trademark-monitoring">Trademark Monitoring</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/trademark-protection-coverage">Trademark Protection Coverage</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/cease-and-desist-letters">Cease & Desist Letters</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/co-existence-agreement">Co-Existence Agreement</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/abandoned-trademark-re-filing">Abandoned Trademark Refiling</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/ownership-transfer">Ownership Transfer</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/domain-resolution">Domain Resolution</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- Dropdown: Business Services -->
+                        <li class="relative" data-twe-dropdown-ref>
+                            <a class="flex hover:!text-black/80 xl:hover:!text-primary items-center transition-all" href="#" type="button"
+                                id="dropdownMenuButton2" data-twe-dropdown-toggle-ref aria-expanded="false">
+                                Business Services
+                                <span class="ms-2 [&>svg]:w-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <div class="absolute z-[1000] float-left m-0 hidden list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block p-2 max-w-[250px] w-max"
+                                aria-labelledby="dropdownMenuButton1" data-twe-dropdown-menu-ref>
+                                <ul class="max-h-[350px] overflow-hidden overflow-y-auto [&>li>a]:text-wrap">
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/amazon-brand-registry">Amazon Brand Registry</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/business-formation">Business Formation</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/company-dissolution">Company Dissolution</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/share-issuance-management">Issuance of Shares</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/company-name-change">Company Name Change</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/business-renewal">Company Renewals</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/nominee-director-corporate-secretarial-services">Nominee Director & Secretarial Services</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/legal-consultation-on-partnerships-llps">Legal Consultation on Partnerships & LLPs</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/business-due-diligence">Business Due Diligence</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/data-protection-privacy-law">Data Protection & Privacy Law</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/business-immigration-law">Business Immigration Law</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/it-and-commercial-law">IT & Commercial Law</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/share-transfer-assistance">Transfer of Shares</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/good-standing-certification">Certificate of Good Standing</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- Dropdown: Financial Services -->
+                        <li class="relative" data-twe-dropdown-ref>
+                            <a class="flex hover:!text-black/80 xl:hover:!text-primary items-center transition-all" href="#" type="button"
+                                id="dropdownMenuButton2" data-twe-dropdown-toggle-ref aria-expanded="false">
+                                Financial Services
+                                <span class="ms-2 [&>svg]:w-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <div class="absolute z-[1000] float-left m-0 hidden list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block p-2 max-w-[250px] w-max"
+                                aria-labelledby="dropdownMenuButton1" data-twe-dropdown-menu-ref>
+                                <ul class="max-h-[350px] overflow-y-auto overflow-hidden [&>li>a]:text-wrap">
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/book-keeping">Bookkeeping</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/tax-advisory-filing">Tax Advisory & Filing</a></li>
+                                    <li><a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal !text-black hover:bg-zinc-200/70 focus:bg-zinc-200/60 focus:outline-none active:no-underline" href="/cfo-services">CFO Services</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <a href="/contact-us" class="btn btn-primary !text-black">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- <ul class="flex justify-center items-center gap-5 py-5">
+  <li>
+    <a href="/">Home</a>
+  </li>
+  <li>
+    <a href="/about">About</a>
+  </li>
+  <li>
+    <a href="/contact">Contact</a>
+    <li>
+      <a href="/services">Services</a>
+    </li>
+  </li>
+</ul> -->
