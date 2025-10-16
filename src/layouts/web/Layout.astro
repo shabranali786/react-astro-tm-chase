@@ -1,49 +1,61 @@
 ---
-import { ClientRouter, fade  } from 'astro:transitions';
-import Header from '../web/Header.astro';
+import { ClientRouter, fade } from "astro:transitions";
+import Header from "../web/Header.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Trademark Chase</title>
-<meta name="description" content="Trademark Chase provides fast, compliant trademark registration services with same-day filing, managed by U.S. licensed attorneys.">
-<meta name="keywords" content="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Trademark Chase</title>
+    <meta
+      name="description"
+      content="Trademark Chase provides fast, compliant trademark registration services with same-day filing, managed by U.S. licensed attorneys."
+    />
+    <meta name="keywords" content="" />
 
-<!-- <link rel="icon" type="images/jpg" href="{{asset('img/fav.svg')}}"> -->
-<link rel="stylesheet" href="/assets/css/main.css">
+    <!-- <link rel="icon" type="images/jpg" href="{{asset('img/fav.svg')}}"> -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css"
+    />
+    <ClientRouter />
+  </head>
+  <body>
+    <Header />
+    <div transition:animate={fade({ duration: "0s" })}>
+      <slot />
+    </div>
+    <script is:inline>
+      const script = document.createElement("script");
+      script.src = "/libs/tw-elements/js/tw-elements.umd.min.js";
+      script.type = "text/javascript";
 
+      script.onload = function () {
+        if (window.te) {
+          window.te.initTE &&
+            window.te.initTE({ Collapse: true, Dropdown: true });
+        }
+      };
 
-
-<link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
-		<ClientRouter/>
-	</head>
-	<body>
-		<Header/>
-		<div transition:animate={fade({ duration: '0s' })}>
-			<slot/>
-		</div>
-		<script is:inline>
-			const script = document.createElement('script');
-			script.src = "/libs/tw-elements/js/tw-elements.umd.min.js";
-			script.type = "text/javascript";
-			
-			script.onload = function() {
-				if (window.te) {
-					window.te.initTE && window.te.initTE({ Collapse: true, Dropdown: true });
-				}
-			};
-			
-			document.body.appendChild(script);
-		</script>
-	</body>
+      document.body.appendChild(script);
+    </script>
+	<!-- Start of alphachatpro.com Widget script -->
+<script id="cd360-snippet" src="https://alphachatpro.com:/assets/scripts/snippet.js?key=67194b1713fb6b5e96bb86cb"></script><!-- End of alphachatpro.com Widget script -->
+  </body>
 </html>
