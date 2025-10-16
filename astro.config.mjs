@@ -32,4 +32,15 @@ export default defineConfig({
       },
     ],
   },
+  // ⚡ Build optimization
+  build: {
+    inlineStylesheets: "auto",
+  },
+
+  // ⚡ Vite optimization
+  vite: {
+    build: {
+      cssCodeSplit: false,
+    },
+  },
 });
