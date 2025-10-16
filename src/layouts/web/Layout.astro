@@ -19,5 +19,20 @@ import Header from '../web/Header.astro';
 		<div transition:animate={fade({ duration: '0s' })}>
 			<slot/>
 		</div>
+		<script is:inline>
+			// Pehle tw-elements ka script load karen
+			const script = document.createElement('script');
+			script.src = "../../../node_modules/tw-elements/js/tw-elements.umd.min.js";
+			script.type = "text/javascript";
+			
+			// Script load hone ke baad hi initialize karen
+			script.onload = function() {
+				if (window.te) {
+					window.te.initTE && window.te.initTE({ Collapse: true, Dropdown: true });
+				}
+			};
+			
+			document.body.appendChild(script);
+		</script>
 	</body>
 </html>
