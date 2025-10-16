@@ -2,11 +2,7 @@
 import BrandRegister from "../../components/BrandRegister.astro";
 import LPHeroSection from "../../components/LPHeroSection.astro";
 import Layout from "../../layouts/lp/Layout.astro";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import OfferSlider from "../../components/OfferSlider.astro";
 ---
 
 <Layout>
@@ -18,7 +14,7 @@ import 'swiper/css/pagination';
   </section>
 
   <!-- SERVICES OFFERED -->
-  <section class="bg-[#1D1616] pt-5">
+  <section class="bg-[#1D1616] pt-5 md:pt-0 lg:pt-20">
     <div class="container">
       <div class="flex gap-4 flex-wrap lg:flex-nowrap">
         <div class="w-full lg:w-5/12">
@@ -27,160 +23,12 @@ import 'swiper/css/pagination';
             <br class="hidden lg:block" /> Trademark Chase
           </h2>
           <p>
-            Trademark Chase provides fast, USPTO-compliant trademark business
-            name registration services with same-day filing. Whether you want to
-            trademark your brand name or apply for a logo registration, our
-            experts make the process smooth and hassle-free.
+            Trademark Chase provides fast, compliant trademark registration
+            services with same-day filing, managed by U.S.-licensed attorneys.
           </p>
         </div>
-
         <div class="w-full lg:w-7/12">
-          <Swiper
-        
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={30}
-            slidesPerView={3}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            loop={true}
-            className="ServicesSlider"
-          >
-            <!-- Slide 1 -->
-            <SwiperSlide>
-              <div class="rounded-xl bg-white p-4 py-7 h-full relative group hover:bg-primary transition duration-300 flex flex-col items-start">
-                <img
-                  src="https://trademarkchase.com/img/icons/services/1.png"
-                  alt="icons"
-                  width="64"
-                  height="64"
-                  class="object-contain mb-5"
-                  loading="lazy"
-                />
-                <h3 class="text-[18px] lg:text-[20px] 2xl:text-[22px] font-semibold mb-2">
-                  Trademark Registration
-                </h3>
-                <p class="text-base max-h-[150px] overflow-y-auto group-hover:text-[#61430F] text-[#565656] transition-all">
-                  Ensure your brand is protected with trademark registration.
-                  Whether you want to trademark your name, secure a logo, or
-                  protect your brand identity, our team handles the filing
-                  process with precision, giving you exclusive rights and peace
-                  of mind.
-                </p>
-              </div>
-            </SwiperSlide>
-
-            <!-- Slide 2 -->
-            <SwiperSlide>
-              <div class="rounded-xl bg-white p-4 py-7 h-full relative group hover:bg-primary transition duration-300 flex flex-col items-start">
-                <img
-                  src="https://trademarkchase.com/img/icons/services/2.png"
-                  alt="icons"
-                  width="64"
-                  height="64"
-                  class="object-contain mb-5"
-                  loading="lazy"
-                />
-                <h3 class="text-[18px] lg:text-[20px] 2xl:text-[22px] font-semibold mb-2">
-                  Trademark Renewal
-                </h3>
-                <p class="text-base max-h-[150px] overflow-y-auto group-hover:text-[#61430F] text-[#565656] transition-all">
-                  Maintain your trademark’s validity with timely renewals. Our
-                  team ensures continuous protection of your intellectual
-                  property.
-                </p>
-              </div>
-            </SwiperSlide>
-
-            <!-- Slide 3 -->
-            <SwiperSlide>
-              <div class="rounded-xl bg-white p-4 py-7 h-full relative group hover:bg-primary transition duration-300 flex flex-col items-start">
-                <img
-                  src="https://trademarkchase.com/img/icons/services/3.png"
-                  alt="icons"
-                  width="64"
-                  height="64"
-                  class="object-contain mb-5"
-                  loading="lazy"
-                />
-                <h3 class="text-[18px] lg:text-[20px] 2xl:text-[22px] font-semibold mb-2">
-                  Copyright Registration
-                </h3>
-                <p class="text-base max-h-[150px] overflow-y-auto group-hover:text-[#61430F] text-[#565656] transition-all">
-                  Legally safeguard your creative works with copyright
-                  registration, granting exclusive rights across various media
-                  platforms.
-                </p>
-              </div>
-            </SwiperSlide>
-
-            <!-- Slide 4 -->
-            <SwiperSlide>
-              <div class="rounded-xl bg-white p-4 py-7 h-full relative group hover:bg-primary transition duration-300 flex flex-col items-start">
-                <img
-                  src="https://trademarkchase.com/img/icons/services/3.png"
-                  alt="icons"
-                  width="64"
-                  height="64"
-                  class="object-contain mb-5"
-                  loading="lazy"
-                />
-                <h3 class="text-[18px] lg:text-[20px] 2xl:text-[22px] font-semibold mb-2">
-                  Comprehensive Trademark Search
-                </h3>
-                <p class="text-base max-h-[150px] overflow-y-auto group-hover:text-[#61430F] text-[#565656] transition-all">
-                  Our expert team leverages advanced technology and deep
-                  industry insight to perform a comprehensive search, uncover
-                  potential conflicts, and deliver a detailed report of the
-                  findings.
-                </p>
-              </div>
-            </SwiperSlide>
-
-            <!-- Slide 5 -->
-            <SwiperSlide>
-              <div class="rounded-xl bg-white p-4 py-7 h-full relative group hover:bg-primary transition duration-300 flex flex-col items-start">
-                <img
-                  src="https://trademarkchase.com/img/icons/services/3.png"
-                  alt="icons"
-                  width="64"
-                  height="64"
-                  class="object-contain mb-5"
-                  loading="lazy"
-                />
-                <h3 class="text-[18px] lg:text-[20px] 2xl:text-[22px] font-semibold mb-2">
-                  Amazon Brand Registry
-                </h3>
-                <p class="text-base max-h-[150px] overflow-y-auto group-hover:text-[#61430F] text-[#565656] transition-all">
-                  Amazon Brand Registry empowers brand owners to register
-                  trademarks and protect their intellectual property while
-                  strengthening their brand presence.
-                </p>
-              </div>
-            </SwiperSlide>
-
-            <!-- Slide 6 -->
-            <SwiperSlide>
-              <div class="rounded-xl bg-white p-4 py-7 h-full relative group hover:bg-primary transition duration-300 flex flex-col items-start">
-                <img
-                  src="https://trademarkchase.com/img/icons/services/3.png"
-                  alt="icons"
-                  width="64"
-                  height="64"
-                  class="object-contain mb-5"
-                  loading="lazy"
-                />
-                <h3 class="text-[18px] lg:text-[20px] 2xl:text-[22px] font-semibold mb-2">
-                  International Trademark Registration
-                </h3>
-                <p class="text-base max-h-[150px] overflow-y-auto group-hover:text-[#61430F] text-[#565656] transition-all">
-                  Secure exclusive rights to your brand in multiple countries,
-                  protecting against infringement and ensuring global recognition
-                  and legal coverage.
-                </p>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+          <OfferSlider />
         </div>
       </div>
     </div>

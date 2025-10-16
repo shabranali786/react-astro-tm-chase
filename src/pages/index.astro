@@ -1,6 +1,7 @@
 ---
 import BrandRegister from '../components/BrandRegister.astro'
 import HeroSection from '../components/HeroSection.astro'
+import OfferSlider from '../components/OfferSlider.astro'
 import Layout from '../layouts/web/Layout.astro'
 ---
 
@@ -10,5 +11,26 @@ import Layout from '../layouts/web/Layout.astro'
     {/* brand Register section*/}
   <section class="bg-[#1D1616]">
     <BrandRegister/>
+  </section>
+
+    <!-- SERVICES OFFERED -->
+  <section class="bg-[#1D1616] pt-5 md:pt-0 lg:pt-20">
+    <div class="container">
+      <div class="flex gap-4 flex-wrap lg:flex-nowrap">
+        <div class="w-full lg:w-5/12">
+          <h2 class="section-title text-white">
+            <span class="font-thin">SERVICES OFFERED BY</span>
+            <br class="hidden lg:block" /> Trademark Chase
+          </h2>
+          <p>
+            Trademark Chase provides fast, compliant trademark registration
+            services with same-day filing, managed by U.S.-licensed attorneys.
+          </p>
+        </div>
+        <div class="w-full lg:w-7/12">
+          <OfferSlider />
+        </div>
+      </div>
+    </div>
   </section>
 </Layout>

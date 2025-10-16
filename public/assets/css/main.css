@@ -7,8 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-950: oklch(25.8% 0.092 26.042);
-    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-zinc-200: oklch(92% 0.004 286.32);
     --color-neutral-100: oklch(97% 0 0);
@@ -333,9 +331,6 @@
   .flex {
     display: flex;
   }
-  .grid {
-    display: grid;
-  }
   .hidden {
     display: none;
   }
@@ -344,10 +339,6 @@
   }
   .table {
     display: table;
-  }
-  .size-\[24px\] {
-    width: 24px;
-    height: 24px;
   }
   .size-\[clamp\(30px\,5vw\,40px\)\] {
     width: clamp(30px, 5vw, 40px);
@@ -407,9 +398,6 @@
   }
   .w-screen {
     width: 100vw;
-  }
-  .max-w-2xl {
-    max-width: var(--container-2xl);
   }
   .max-w-\[200px\] {
     max-width: 200px;
@@ -501,9 +489,6 @@
   .list-none {
     list-style-type: none;
   }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .flex-col {
     flex-direction: column;
   }
@@ -533,9 +518,6 @@
   }
   .justify-center {
     justify-content: center;
-  }
-  .justify-end {
-    justify-content: flex-end;
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -655,9 +637,6 @@
   .bg-\[\#6d6d6d\] {
     background-color: #6d6d6d;
   }
-  .bg-amber-600 {
-    background-color: var(--color-amber-600);
-  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -696,6 +675,9 @@
   }
   .px-\[0\.4rem\] {
     padding-inline: 0.4rem;
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
   }
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
@@ -738,14 +720,6 @@
   }
   .font-roboto {
     font-family: var(--font-roboto);
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-base {
     font-size: var(--text-base);
@@ -810,9 +784,6 @@
     --tw-tracking: var(--tracking-normal);
     letter-spacing: var(--tracking-normal);
   }
-  .text-nowrap {
-    text-wrap: nowrap;
-  }
   .text-wrap {
     text-wrap: wrap;
   }
@@ -838,17 +809,11 @@
   .text-\[\#565656\] {
     color: #565656;
   }
-  .text-black {
-    color: var(--color-black);
-  }
   .text-neutral-500 {
     color: var(--color-neutral-500);
   }
   .text-primary {
     color: var(--color-primary);
-  }
-  .text-red-950 {
-    color: var(--color-red-950);
   }
   .text-white {
     color: var(--color-white);
@@ -882,9 +847,6 @@
   }
   .opacity-50 {
     opacity: 50%;
-  }
-  .opacity-85 {
-    opacity: 85%;
   }
   .opacity-100 {
     opacity: 100%;
@@ -1117,13 +1079,6 @@
       }
     }
   }
-  .hover\:opacity-90 {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 90%;
-      }
-    }
-  }
   .hover\:shadow-none {
     &:hover {
       @media (hover: hover) {
@@ -1242,6 +1197,11 @@
       width: calc(8/12 * 100%);
     }
   }
+  .md\:pt-0 {
+    @media (width >= 768px) {
+      padding-top: calc(var(--spacing) * 0);
+    }
+  }
   .md\:text-xl {
     @media (width >= 768px) {
       font-size: var(--text-xl);
@@ -1256,11 +1216,6 @@
   .md\:text-\[40px\] {
     @media (width >= 768px) {
       font-size: 40px;
-    }
-  }
-  .lg\:pointer-events-none {
-    @media (width >= 1024px) {
-      pointer-events: none;
     }
   }
   .lg\:mx-auto {
@@ -1398,6 +1353,11 @@
       padding-block: calc(var(--spacing) * 4);
     }
   }
+  .lg\:pt-20 {
+    @media (width >= 1024px) {
+      padding-top: calc(var(--spacing) * 20);
+    }
+  }
   .lg\:pt-\[5rem\] {
     @media (width >= 1024px) {
       padding-top: 5rem;
@@ -1411,12 +1371,6 @@
   .lg\:text-\[45px\] {
     @media (width >= 1024px) {
       font-size: 45px;
-    }
-  }
-  .lg\:select-none {
-    @media (width >= 1024px) {
-      -webkit-user-select: none;
-      user-select: none;
     }
   }
   .xl\:inline {
@@ -1466,17 +1420,6 @@
   .\34 xl\:gap-4 {
     @media (width >= 1920px) {
       gap: calc(var(--spacing) * 4);
-    }
-  }
-  .\34 xl\:py-2 {
-    @media (width >= 1920px) {
-      padding-block: calc(var(--spacing) * 2);
-    }
-  }
-  .\34 xl\:text-base {
-    @media (width >= 1920px) {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .\34 xl\:text-\[22px\] {
