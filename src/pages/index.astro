@@ -2,6 +2,7 @@
 import BrandRegister from '../components/BrandRegister.astro'
 import HeroSection from '../components/HeroSection.astro'
 import OfferSlider from '../components/OfferSlider.astro'
+import RegistrationWork from '../components/RegistrationWork.astro'
 import Layout from '../layouts/web/Layout.astro'
 ---
 
@@ -28,9 +29,14 @@ import Layout from '../layouts/web/Layout.astro'
           </p>
         </div>
         <div class="w-full lg:w-7/12">
-          <OfferSlider />
+          <OfferSlider/>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Trademark Registration Works  -->
+    <section class=" bg-[#1D1616] md:pt-10 lg:pt-0 lg:pb-40">
+        <RegistrationWork/>
+    </section>
 </Layout>
